@@ -762,7 +762,7 @@ function buildFinalHold(L){
 window.history.pushState(null,'',location.href);
 window.addEventListener('popstate',()=>{window.history.pushState(null,'',location.href);score+=30;traps++;updHUD();sv();toast('😂 Back button? +30 pts!');flash('#c77dff')});
 function fakeExit(){score+=30;traps++;tries++;updHUD();sv();flash('#ff4d6d');spawnP('#ff4d6d',8);toast('🚪 Fake exit! +30 pts — gotcha!')}
-async function shareScore(){const t=`I scored ${score} pts on TIMEPASS 30! Level ${lvl}/30 completed! Can you escape all 30? 😈`;if(navigator.share){try{await navigator.share({title:'TIMEPASS 30',text:t})}catch(e){}}else{navigator.clipboard.writeText(t);toast('📋 Score copied!')}}
+async function shareScore(){const t=`I scored ${score} points on escape the site!! Level ${lvl}/30 completed! Can you escape all? 😈 \n\n Play here and prove it \n👉 https://escapethesite.netlify.app`;if(navigator.share){try{await navigator.share({title:'TIMEPASS 30',text:t})}catch(e){}}else{navigator.clipboard.writeText(t);toast('📋 Score copied!')}}
 
 // ═══ HELPERS ═══
 function mkBtn(label,cls,badge){
